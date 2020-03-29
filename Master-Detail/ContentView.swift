@@ -17,25 +17,30 @@ private let dateFormatter: DateFormatter = {
 
 struct ContentView: View {
     @Environment(\.managedObjectContext)
-    var viewContext   
+    var viewContext
+
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State var showAlert = false
  
     var body: some View {
         NavigationView {
-            MasterView()
-                .navigationBarTitle(Text("Master"))
+            Text("Master")
+                .navigationBarTitle("Master")
                 .navigationBarItems(
-                    leading: EditButton(),
                     trailing: Button(
                         action: {
-                            withAnimation { Event.create(in: self.viewContext) }
+                            self.showAlert.toggle()
                         }
                     ) { 
-                        Image(systemName: "plus")
+                        Image(systemName: "exclamationmark.triangle")
+                            .imageScale(.large)
+                            .padding()
                     }
-                )
-            Text("Detail view content goes here")
-                .navigationBarTitle(Text("Detail"))
+            )
+        }.alert(isPresented: $showAlert) {
+            Alert(title: Text("Alert"))
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+
     }
 }
 
