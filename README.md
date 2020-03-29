@@ -1,12 +1,16 @@
 ## Problem
+
 There is a content view that may show an alert to user. If there is `@Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>` defined in the content view, then the alert shown may have three OK buttons.
 
 ## How to reproduce
+
 ### Environment
-* macOS 10.15.4
-* Xcode 11.4
+
+- macOS 10.15.4
+- Xcode 11.4
 
 ### Steps
+
 1. Create a new iOS Master-Detail app
 2. Enable Mac Catalyst
 3. Define `presentationMode` in the ContentView
@@ -15,10 +19,13 @@ There is a content view that may show an alert to user. If there is `@Environmen
 6. Click that button
 
 ## Expected behavior
+
 An alert with one OK button shown
 
 ## Observed behavior
+
 An alert with three OK button shown
+![A dialog with three OK button](./Screenshot%202020-03-29%20at%2011.07.03%20PM.png)
 
 ## Discussion
 
