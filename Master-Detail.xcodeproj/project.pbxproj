@@ -28,6 +28,7 @@
 		E817E537242DA012004EB0CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E817E53A242DA012004EB0CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E817E53C242DA012004EB0CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E85CE0282431BE020043C0DA /* Master-Detail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Master-Detail.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		E817E528242DA00E004EB0CA /* Master-Detail */ = {
 			isa = PBXGroup;
 			children = (
+				E85CE0282431BE020043C0DA /* Master-Detail.entitlements */,
 				E817E529242DA00E004EB0CA /* AppDelegate.swift */,
 				E817E52E242DA00E004EB0CA /* SceneDelegate.swift */,
 				E817E530242DA00E004EB0CA /* Event.swift */,
@@ -292,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Master-Detail/Master-Detail.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Master-Detail/Preview Content\"";
 				DEVELOPMENT_TEAM = JVD8WT99LB;
@@ -303,6 +306,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kytse.Master-Detail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Master-Detail/Master-Detail.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Master-Detail/Preview Content\"";
 				DEVELOPMENT_TEAM = JVD8WT99LB;
@@ -323,6 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kytse.Master-Detail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
